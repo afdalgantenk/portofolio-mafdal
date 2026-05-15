@@ -60,24 +60,37 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          animate={{ y: [0, -6, 0] }}
+          animate={{
+            y: [0, -6, 0]
+          }}
           transition={{
             duration: 3,
             repeat: Infinity,
-            ease: 'easeInOut',
+            repeatType: 'mirror',
+            ease: [0.42, 0, 0.58, 1],
             delay: 1
           }}
-          className="mb-10"
+          className="mb-10 will-change-transform"
           style={{
             borderLeft: '3px solid #4f8ef7',
             paddingLeft: '14px',
-            filter: 'drop-shadow(0 0 8px rgba(79,142,247,0.6))',
+            filter: `
+              drop-shadow(0 0 6px rgba(96,165,250,0.55))
+              drop-shadow(0 0 14px rgba(59,130,246,0.28))
+            `,
           }}
         >
-        <p className="text-base font-medium" style={{ color: '#ffffff' }}>
-          Memulai dari nol, otodidak sejak 2020. Tidak ada gelar — <br />
-          hanya rasa penasaran dan ambisi yang tidak pernah berhenti.
-        </p>
+          <p
+            className="text-base font-medium"
+            style={{
+              color: '#ffffff',
+              textShadow: '0 0 10px rgba(96,165,250,0.25)',
+              WebkitTextStroke: '0.15px rgba(255,255,255,0.05)',
+            }}
+          >
+            Memulai dari nol, otodidak sejak 2020. Tidak ada gelar — <br />
+            hanya rasa penasaran dan ambisi yang tidak pernah berhenti.
+          </p>
         </motion.div>
 
         <motion.div
