@@ -1,5 +1,4 @@
 'use client'
-
 import { motion } from 'framer-motion'
 import { MdEmail } from 'react-icons/md'
 import { FaInstagram } from 'react-icons/fa'
@@ -21,21 +20,16 @@ export default function Contact() {
           <p className="text-lg leading-relaxed mb-10" style={{ color: '#888899' }}>
             Tertarik untuk bekerja sama atau punya pertanyaan? Jangan ragu untuk menghubungi saya.
           </p>
-
           <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="mailto:officialmafdal@gmail.com"
-              className="flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium text-white transition-all hover:-translate-y-0.5"
+            <span
+              className="flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium text-white pointer-events-none select-none"
               style={{ background: '#4f8ef7' }}
             >
               <MdEmail size={18} />
               officialmafdal@gmail.com
-            </a>
-            <a
-              href="https://instagram.com/m.afdal_r"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all hover:-translate-y-0.5"
+            </span>
+            <span
+              className="flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium pointer-events-none select-none"
               style={{
                 border: '0.5px solid rgba(255,255,255,0.12)',
                 color: '#888899'
@@ -43,11 +37,10 @@ export default function Contact() {
             >
               <FaInstagram size={18} />
               @m.afdal_r
-            </a>
+            </span>
           </div>
         </motion.div>
       </div>
-
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
